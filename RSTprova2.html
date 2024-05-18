@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF; /* Bianco */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFCC00; /* Giallo più acceso */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px 20px; /* Aumentato spazio */
+            max-width: 800px;
+            margin: auto;
+            background-color: white; /* Sfondo Bianco */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px; /* Aggiunto margine inferiore */
+        }
+        footer {
+            background-color: #FFCC00; /* Giallo più acceso */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .service, .portfolio-item {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #FFFFCC; /* Giallo Chiaro */
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #FFCC00; /* Giallo più acceso */
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            nav a {
+                padding: 10px;
+                border-top: 1px solid #FFCC00; /* Giallo più acceso */
+                color: white;
+            }
+            .menu-icon {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1>RST</h1>
+    <nav id="menu">
+        <a href="#home">Home</a>
+        <a href="#store">Store</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Benvenuti su RST</h2>
+    <p>La tua destinazione per abiti eleganti e moderni.</p>
+</section>
+
+<section id="servizi">
+    <h2>Servizi</h2>
+    <div class="service">
+        <h3>Consulenza di Moda</h3>
+        <p>Offriamo consulenze personalizzate per aiutarti a trovare lo stile perfetto per ogni occasione.</p>
+    </div>
+    <div class="service">
+        <h3>Abiti su Misura</h3>
+        <p>Realizziamo abiti su misura per assicurare una vestibilità perfetta e un look impeccabile.</p>
+    </div>
+</section>
+
+<section id="store">
+    <h2>Store</h2>
+    <p>Esplora la nostra selezione di abiti e accessori di alta qualità.</p>
+</section>
+
+<section id="contatti">
+    <h2>Contatti</h2>
+    <p>Per ulteriori informazioni sui nostri servizi o per fissare un appuntamento, contattaci:</p>
+    <ul>
+        <li>Telefono: +39 123 456 7890</li>
+        <li>Indirizzo: Via della Moda, 123, Milano, Italia</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 RST. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+</body>
+</html>
